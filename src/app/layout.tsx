@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/nav-bar";
+import Footer from "@/components/footer";
+import ReactQueryProvider from "@/providers/react-query-provider";
+import ReduxToolKitProvider from "@/providers/redux-toolkit-provider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--montserrat-font",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +25,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={montserrat.className}>
+        <ToastContainer />
+        <ReduxToolKitProvider>
+          <ReactQueryProvider>
+            <Navbar />
+            <main className="min-h-screen bg-white w-full">{children}</main>
+            <Footer />
+          </ReactQueryProvider>
+        </ReduxToolKitProvider>
+      </body>
     </html>
   );
 }
