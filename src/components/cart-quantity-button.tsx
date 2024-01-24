@@ -37,7 +37,7 @@ const CartQuantityButton = ({ quantity, productIndex }: CartQuantityButton) => {
       >
         <RemoveIcon />
       </Button>
-      <p>{quantity}</p>
+      <p className="text-black">{quantity}</p>
       <Button
         customStyle="shadow-md rounded-sm border border-blue bg-blue  text-white flex justify-center items-center rounded-[5px] w-[52px] h-[52px] text-black"
         click={increment}
