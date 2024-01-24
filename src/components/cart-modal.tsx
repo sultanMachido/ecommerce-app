@@ -42,11 +42,11 @@ const CartModal = (props: CartModalProps) => {
             Cart({cartInfo?.cartInfo?.cartProducts?.length})
           </h4>
           <span onClick={props?.handleClose}>
-            <CloseIcon />
+            <p className="font-bold">CLOSE</p>
           </span>
         </div>
         <hr />
-        <div className="overflow-y-hidden h-[370px]">
+        <div className="overflow-y-scroll h-[370px]">
           {cartInfo?.cartInfo?.cartProducts?.length
             ? cartInfo?.cartInfo?.cartProducts?.map(
                 (product: { [key: string]: any }, index: number) => (
