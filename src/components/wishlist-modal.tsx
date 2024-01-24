@@ -27,7 +27,7 @@ const WishListModal = (props: WishListModalProps) => {
             Wishlist({wishlist?.wishListInfo?.wishListProducts?.length})
           </h4>
           <span onClick={props?.handleClose}>
-            <CloseIcon />
+          <p className="font-bold text-black">CLOSE</p>
           </span>
         </div>
         <hr />
