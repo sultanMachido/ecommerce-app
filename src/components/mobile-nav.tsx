@@ -26,7 +26,7 @@ const MobileNavigation = () => {
       />
       <div className="px-[147px] text-center">
         {navItems?.map((item) => (
-          <ul>
+          <ul key={item.name}>
             <li className="py-[15px] text-black">
               <Link href={item?.path}>{item?.name}</Link>
               {item?.children?.length ? <ExpandMoreIcon /> : null}
