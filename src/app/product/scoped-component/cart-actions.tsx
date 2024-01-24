@@ -51,7 +51,12 @@ const CartActions = ({ productInfo }: CartActionsProp) => {
           }}
           disabled={wishListActiveColor ? true : false}
         >
-          <FavoriteBorderIcon color="primary"/>
+           <Image
+            src="/icons/icn-favorite.png"
+            alt="favorite icon"
+            width={20}
+            height={20}
+          />
         </button>
         <button
           className={`w-[40px] h-[40px] flex justify-center items-center rounded-full border border-[#E8E8E8]`}
