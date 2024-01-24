@@ -13,7 +13,7 @@ const BaseModal = ({ children, open, handleClose }: BaseModalProps) => {
       onClose={handleClose}
       style={{
         width: "100%",
-        height: "60vh",
+        height: "auto",
         marginTop: "200px",
         border: "none",
         outline: 0,

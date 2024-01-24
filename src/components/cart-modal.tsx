@@ -42,7 +42,7 @@ const CartModal = (props: CartModalProps) => {
             Cart({cartInfo?.cartInfo?.cartProducts?.length})
           </h4>
           <span onClick={props?.handleClose}>
-            <p className="font-bold">CLOSE</p>
+            <p className="font-bold text-black">CLOSE</p>
           </span>
         </div>
         <hr />
