@@ -46,7 +46,7 @@ const CartModal = (props: CartModalProps) => {
           </span>
         </div>
         <hr />
-        <div className="overflow-y-scroll h-[370px]">
+        <div className="overflow-y-hidden h-[370px]">
           {cartInfo?.cartInfo?.cartProducts?.length
             ? cartInfo?.cartInfo?.cartProducts?.map(
                 (product: { [key: string]: any }, index: number) => (
